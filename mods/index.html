@@ -1,1 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Xiecraft手册</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
 
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>XIECRAFT手册</h1>
+<p>由于浏览器缓存原因，每次查看此页面时请按下Ctrl+F5或者Ctrl+SHift+R清除缓存!<br>
+<strong>请务必仔细阅读此手册</strong><br>
+Lastest Update<br>
+By Im_Explorer <br>
+2023/1/19 17:25:43 </p>
+<h2>服务器介绍</h2>
+<p>服务器成立于2022年8月20日，几经辗转从面板服到了现在的VPS服<del>(虽然一直没啥人玩)</del><br>
+<strong>您的游玩是我们最大的动力</strong><br>
+服务器适用版本为<strong>1.12+</strong>,服务器主打<u><a href="https://slimefun-wiki.guizhanss.cn/">粘液科技</a></u>生存<del>(当然你想原版也是行的)</del><br>
+嫌麻烦不想自己配置游戏端?加入QQ群获取已经配置好的游戏端:<br>
+服务器QQ群: <a href="https://qm.qq.com/cgi-bin/qm/qr?k=-qjqcNsIfWsdj5k4M-jN6-P4V1MO4gT7&amp;jump_from=webapi&amp;authKey=EnR+Pq0mXhZXNzuSaQaaJLjQdzkzf3Y6ZXD5T1NPX6mcarFkqa8BnPzzui9bBZ65">点击加入</a><br>
+服务器ip:进群查看</p>
+<h3>TIPS:</h3>
+<ul>
+<li>由于服务器部分字体颜色为RGB颜色，1.16以下并不支持，所以强烈建议使用1.16+进行游玩</li>
+<li>1.16-版本由于年代久远，插件不一定兼容，在1.16-版本出现的bug一律不予理会(除非确定在1.16+也有相同bug)</li>
+<li>服务器配有相应的粘液科技材质包，你可以在服务器的cd菜单里找到下载链接，或者在群里下载(配好的游戏端自带)</li>
+<li>服务器目前周目：一周目</li>
+<li><strong>服务器尚处于不删档测试阶段，请定时查看此帮助文档</strong></li>
+</ul>
+<h2></h2>
+<h2>服务器规则</h2>
+<ol>
+<li>禁止开挂，禁止开挂，禁止开挂！</li>
+<li>不得在服务器内讨论政治敏感话题</li>
+<li>不得辱骂玩家或管理</li>
+<li>不允许在未经他人允许的情况下破坏他人机器、铁路、建筑或拿他人物品(可以查到方块更改记录)</li>
+<li>严禁炸图<del>(你是想死吗)</del><br></li>
+</ol>
+<h2></h2>
+<h2>群规则</h2>
+<p><strong>请务必仔细阅读，务必遵守！</strong><br>
+1. 为方便群员之间的交流，入群后请备注自己的群名称(不允许为空)<br>
+2. 请勿发送任何违法犯罪或虚假的信息(包括但不限于二维码，链接)<br>
+3. 请勿发送辱骂他人，侮辱他人的信息<br>
+4. 请勿刷屏<br>
+5. 如果遇到什么困难，可以在群中<strong>适当</strong>的说出来<br />
+<h2></h2>
+<h2>附件</h2>
+<p><a href="https://xiecraftoffical.github.io/plugins">插件列表</a><br>
+<a href="https://xiecraftoffical.github.io/mods">整合包模组列表</a></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
